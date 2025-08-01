@@ -1,21 +1,35 @@
-Basic usage
+# QueryAgent
 
-temporary setup for development:
+AI-powered ClickHouse query optimization tool.
 
-python3 required
+## Setup
+
+**Requirements:**
+- Python 3.8+
+- ClickHouse server
+- Anthropic API key
+
+**Installation:**
+
+```bash
+# Check Python version
 python3 --version
 
-create python virtual environment
+# Create virtual environment
 python3 -m venv venv
 
-activate python virtual environment
+# Activate virtual environment
 source venv/bin/activate
 
-install dependencies (some may be unused currently)
+# Install dependencies
 pip install -r requirements.txt
 
-expose your anthropic key as an environment variable
-  export ANTHROPIC_API_KEY=[key]
+# Set API key
+export ANTHROPIC_API_KEY="your_key_here"
+```
 
-setup python virtual environment
-  
+## Usage
+
+```bash
+python -m queryagent.cli.main --query "SELECT ..." --effort-level medium
+```
