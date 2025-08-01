@@ -1,0 +1,17 @@
+{
+  "env": {
+    "BASH_DEFAULT_TIMEOUT_MS": "600000",
+    "BASH_MAX_TIMEOUT_MS": "900000"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "mcp__zen__thinkdeep",
+      "Bash(source:*)",
+      "Bash(grep:*)",
+      "mcp__zen__analyze",
+      "mcp__zen__chat"
+    ],
+    "deny": []
+  }
+}

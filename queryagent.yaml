@@ -1,0 +1,35 @@
+clickhouse:
+  database: default
+  max_execution_time: 300
+  max_memory_usage: 10GB
+  readonly: true
+  url: clickhouse://localhost:8123
+effort_levels:
+  high:
+    analysis_depth: comprehensive
+    enable_execution: true
+    max_experiments: 20
+    query_timeout: 300
+  low:
+    analysis_depth: basic
+    enable_execution: false
+    max_experiments: 3
+    query_timeout: 30
+  medium:
+    analysis_depth: standard
+    enable_execution: true
+    max_experiments: 10
+    query_timeout: 120
+llm:
+  max_tokens: 4000
+  model: claude-sonnet-4-20250514
+  provider: anthropic
+  temperature: 0.1
+logging:
+  enable_llm_logging: true
+  level: INFO
+  trace_file: queryagent_trace.jsonl
+safety:
+  abort_on_high_load: true
+  max_cpu_threshold: 80
+  max_memory_threshold: 85

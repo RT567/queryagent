@@ -1,0 +1,1 @@
+"""Tools for QueryAgent - embedded MCP-style functionality."""
